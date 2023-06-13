@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- my bootstrap does not work having difficulty styling ask kyle on 1:1-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <title>Dojo Survey form intake </title>
+</head>
+<body>
+    <div class ="container bg-secondary"> 
+        <h1>Dojo Survey</h1>
+        <!--Creating a form for user to fill out-->
+        <form action="/process" method ="post" >
+            <!-- each label needs a div -->
+            <div class="mb-3">
+                <label>Name: </label>
+                <input type="text" name="name">
+            </div>
+
+            <div class="input-group mb-3">
+                <label> Dojo Location: </label>
+                <select name="location" >
+                    <option value="san_jose">San Jose</option>
+                    <option value="seattle">Seattle</option>
+                    <option value="san_diego">San Diego</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label>Favorite Language</label>
+                <select name="favorite_language">Favorite Language: 
+                    <option value="python">Python</option>
+                    <option value="java">Java</option>
+                    <option value="javascript">JavaScript</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label>Comment (optional): </label>
+                <input type="text" name="comments">
+            </div>
+
+            <div class="button">
+                <!-- do not use a link for a submit button -->
+                <button style="background-color: rgb(59, 133, 211); color: white; padding: 12px 20px; border: none; border-radius: 4px; cursor: pointer;">
+                Submit
+                </button>
+        </form>
+    </div>
+</body>
+</html>
